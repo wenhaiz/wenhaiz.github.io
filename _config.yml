@@ -17,7 +17,6 @@ exclude:
 - CNAME
 - Gemfile
 - Gemfile.lock
-- garth-jekyll-theme.gemspec
 
 # 2. Installed Gems
 plugins:
@@ -32,7 +31,7 @@ sass:
   style: compressed # Style compression
 permalink: pretty  # Permalink style (/YYYY/MM/DD/page-name/)
 excerpt_separator: <!-- more --> # Marks end of excerpt in posts
-timezone: Europe/London # Timezone for blog posts and alike
+timezone: Asia/Shanghai # Timezone for blog posts and alike
 
 # 5. Collections
 collections:
