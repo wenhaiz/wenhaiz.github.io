@@ -1,0 +1,4 @@
+- name: 文章
+  url: /
+- name: 关于我
+  url: /about/
