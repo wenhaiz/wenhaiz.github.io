@@ -36,9 +36,9 @@ timezone: Asia/Shanghai # Timezone for blog posts and alike
 # 5. Collections
 collections:
   posts:
-    title: Blog # Needed for Siteleaf
+    title: 文章 # Needed for Siteleaf
     output: true
-    description: "This is merely a demo, find out more [about Garth](about)" # The post list page content
+    description: "To be a writer, you have to consistently show up and write." # The post list page content
 
 # 6. Jekyll collections settings
 defaults:
@@ -54,6 +54,7 @@ defaults:
       type: posts
     values:
       layout: post # Default layout
+      excerpt_separator: <!--more-->
 
 # 7. Site settings
 encoding: utf-8 # Make sure the encoding is right
