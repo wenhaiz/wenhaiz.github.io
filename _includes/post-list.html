@@ -7,8 +7,11 @@
 
           <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
           {% include post-meta.html %}
+          {% if page.description %}
+          {{ page.description | markdownify | truncatewords: 60 }}
+          {% else %}
           {{ page.excerpt | markdownify | truncatewords: 60 }}
-
+          {% endif%}
         </article>
       </li>
     {% endfor %}
@@ -24,8 +27,11 @@
 
           <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
           {% include post-meta.html %}
+          {% if page.description %}
+          {{ page.description | markdownify | truncatewords: 60 }}
+          {% else %}
           {{ page.excerpt | markdownify | truncatewords: 60 }}
-
+          {% endif%}
         </article>
       </li>
     {% endfor %}
