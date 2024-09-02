@@ -29,3 +29,6 @@ category: life
 去锻炼好身体，  
 以及  
 去看一场演唱会。
+
+![演唱会现场图1](/assets/post-img/20240901-concert-1.jpg)
+![演唱会现场图2](/assets/post-img/20240901-concert-2.jpg)
