@@ -59,6 +59,11 @@ body {
 
 .footer {
   border-top: 1px solid darken($backgroundColour, 15%);
+    .copyright{
+      &.typeset{
+        margin: 0 auto;
+    }
+  }
 }
 
 
