@@ -23,7 +23,7 @@ plugins:
 - jekyll-paginate
 
 # 3. Gem settings
-paginate: 3 # jekyll-paginate > items per page
+paginate: 6 # jekyll-paginate > items per page
 paginate_path: page:num # jekyll-paginate > blog page
 
 # 4. Jekyll settings
@@ -58,10 +58,10 @@ defaults:
 
 # 7. Site settings
 encoding: utf-8 # Make sure the encoding is right
-title: "wenhaiz" # Site name or title
-logo: "/assets/logo.svg" # Site logo
+title: "赵文海" # Site name or title
+logo: "/assets/site_logo.svg" # Site logo
 # favicon: "/favicon.ico" # Uncomment to add custom favicon, or leave as is to use site logo
-description: "A really basic theme for Jekyll, using the official Jekyll theme implementation" # Site description and default description
-url: "https://garth.darn.es" # Site url
+description: "你好，我是文海，这是我的个人博客，很高兴认识你。" # Site description and default description
+url: "https://zhaowenhai.com" # Site url
 baseurl: ""
 lang: en-GB
