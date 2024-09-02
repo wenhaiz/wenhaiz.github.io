@@ -1,7 +1,7 @@
 ---
 title: 我要财务自由，我要工作一辈子
 description: 我想要的就是这种真实的状态。
-category: People
+category: life
 ---
 > 这是之前在 [有知有行](https://youzhiyouxing.cn/n/materials/1293) App 上发布的一篇「周报」，记录了我开始财务自由计划之后的一些心路历程。  
 当然，现在这个计划已经被我搁置了。
