@@ -52,8 +52,6 @@ exclude:
 plugins:
   - jekyll-seo-tag
   - jekyll-paginate
-  - jekyll-email-protect
-  - jekyll-target-blank
 
 collections:
   posts:
