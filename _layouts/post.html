@@ -1,19 +1,16 @@
 ---
 layout: default
 ---
+<h1 class="post-headline">{{page.title}}</h1>
+<p class="meta"><small>{{page.date | date: '%B %d, %Y'}}</small></p>
 
-{% include site-header.html %}
+<div class="post-body">
+{{content}}
+</div>
 
-<main class="main  container">
-
-	<article class="article  article--post  content  typeset">
-
-    <h1>{{ page.title }}</h1>
-		{% include post-meta.html %}
-    {{ content }}
-
-  </article>
-
-</main>
-
-{% include site-footer.html %}
+<!-- Comments only for posts -->
+{% if page.path contains '_posts' %}
+    {% if site.disqus-shortname %}
+        {% include disqus.html %}
+    {% endif %}
+{% endif %}
