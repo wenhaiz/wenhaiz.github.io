@@ -1,3 +1,3 @@
 # Blog
 
-This is my personal blog build with [Garth](https://garth.darn.es/)
+This is my personal blog build with [Gradfolio](https://github.com/jitinnair1/gradfolio)
