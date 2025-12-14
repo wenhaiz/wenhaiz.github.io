@@ -9,8 +9,6 @@
           {% include post-meta.html %}
           {% if page.description %}
           {{ page.description | markdownify | truncatewords: 60 }}
-          {% else %}
-          {{ page.excerpt | markdownify | truncatewords: 60 }}
           {% endif%}
         </article>
       </li>
@@ -29,8 +27,6 @@
           {% include post-meta.html %}
           {% if page.description %}
           {{ page.description | markdownify | truncatewords: 60 }}
-          {% else %}
-          {{ page.excerpt | markdownify | truncatewords: 60 }}
           {% endif%}
         </article>
       </li>
