@@ -1,67 +1,78 @@
-# Site configuration
-# 1. Files excluded from Jekyll builds
-# 2. Installed Gems
-# 3. Gem settings
-# 4. Jekyll settings
-# 5. Collections
-# 6. Jekyll collections settings
-# 7. Site settings
+# Site settings
+name: "赵文海"
+title: "赵文海"
+description: "一个持续创作的人"
+baseurl: ""
+url: ""
+email: "wenhaiz.me@gmail.com"
+lang: en-GB
+encoding: utf-8
+timezone: Asia/Shanghai
 
-# 1. Files excluded from Jekyll builds
-exclude:
-- README.md
-- CODE_OF_CONDUCT.md
-- CONTRIBUTING.md
-- screenshot.png
-- LICENSE
-- CNAME
-- Gemfile
-- Gemfile.lock
+# Permalinks & pagination
+permalink: pretty
+paginate: 10
+paginate_path: /blog/page:num/
+excerpt_separator: <!--more-->
 
-# 2. Installed Gems
-plugins:
-- jekyll-paginate
+# Social footer links
+github: "wenhaiz"
 
-# 3. Gem settings
-paginate: 6 # jekyll-paginate > items per page
-paginate_path: page:num # jekyll-paginate > blog page
-
-# 4. Jekyll settings
+# Markdown & assets
+markdown: kramdown
+highlighter: rouge
 sass:
-  style: compressed # Style compression
-permalink: pretty  # Permalink style (/YYYY/MM/DD/page-name/)
-excerpt_separator: <!-- more --> # Marks end of excerpt in posts
-timezone: Asia/Shanghai # Timezone for blog posts and alike
+  sass_dir: /assets/css/_sass
+  style: compressed
 
-# 5. Collections
+# HTML compression toggle
+compress_html:
+  clippings: [html,div,p,ul,td,h1,h2,h3,h4,link,meta,footer,nav,img,header,hr,br,head,style,li,ul,ol,time,main,script,title]
+  comments: ["<!-- ", " -->"]
+  endings: [all]
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: []
+
+include:
+  - _pages
+
+exclude:
+  - README.md
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+  - screenshot.png
+  - LICENSE
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-email-protect
+  - jekyll-target-blank
+
 collections:
   posts:
-    title: 文章 # Needed for Siteleaf
     output: true
-    description: "To be a writer, you have to consistently show up and write." # The post list page content
+  projects:
+    output: true
+    permalink: /projects/:name/
 
-# 6. Jekyll collections settings
 defaults:
   -
     scope:
       path: ""
       type: pages
     values:
-      layout: page # Default layout
+      layout: default
   -
     scope:
       path: ""
       type: posts
     values:
-      layout: post # Default layout
+      layout: post
       excerpt_separator: <!--more-->
-
-# 7. Site settings
-encoding: utf-8 # Make sure the encoding is right
-title: "赵文海" # Site name or title
-logo: "/assets/site_logo.svg" # Site logo
-# favicon: "/favicon.ico" # Uncomment to add custom favicon, or leave as is to use site logo
-description: "你好，我是文海，这是我的个人博客，很高兴认识你。" # Site description and default description
-url: "https://zhaowenhai.com" # Site url
-baseurl: ""
-lang: en-GB
