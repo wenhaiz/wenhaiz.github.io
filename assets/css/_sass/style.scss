@@ -236,7 +236,7 @@ blockquote {
 
   .post-summary {
     margin: 0;
-    color: lighten($text-color-dark, 5%);
+    color: lighten($text-color, 35%);
     font-size: 0.8em;
     margin-top: 0.1em;
   }
@@ -253,6 +253,9 @@ blockquote {
 
 .post-meta {
   color: lighten($text-color, 25%);
+  @media (prefers-color-scheme: dark) {
+      color: lighten($text-color-dark, 20%);
+    }
 }
 
 .post-description {

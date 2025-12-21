@@ -1,7 +1,7 @@
 ---
 title: 理发这件小事
 category: life
-description: 
+description: 理发这件小事时常让我感到苦恼。
 ---
 理发这件小事时常让我感到苦恼。
 
