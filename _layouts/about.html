@@ -3,9 +3,14 @@ layout: default
 ---
 
 {% if page.profile %}
-    {% if page.profile.image %}
-      <img class="profile {{ page.profile.align }}"  width="33.33%" src="{{ page.profile.image | prepend: '/assets/images/' | relative_url }}">
-    {% endif %}
+  {% if page.profile.image %}
+    <figure class="profile-block {{ page.profile.align }}">
+      <img class="profile" width="100%" src="{{ page.profile.image | prepend: '/assets/images/' | relative_url }}" alt="{{ page.profile.caption | default: page.title }}">
+      {% if page.profile.caption %}
+      <figcaption class="profile-caption">{{ page.profile.caption }}</figcaption>
+      {% endif %}
+    </figure>
+  {% endif %}
 {% endif %}
 
 {{ content }}

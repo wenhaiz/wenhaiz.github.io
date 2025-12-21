@@ -23,7 +23,7 @@
 
 <body>
     <header>
-        <h1 class="post-headline">{{site.title}}</h1>
+        <h1 class="post-headline"><a href="{{ site.baseurl }}/">{{site.title}}</a></h1>
         <h3 class="post-description">{{site.description}}</h3>
         {% include navigation.html %}
     </header>
@@ -37,9 +37,7 @@
         <p class="copy">
             <small> &copy; {{site.title}} {{ site.time | date: '%Y' }}</small>
             <br />
-            <small>Powered by <a target="_blank" href="https://jekyllrb.com/">Jekyll</a> and
-                <a target="_blank" href="https://github.com/jitinnair1/gradfolio/">Gradfolio</a>.
-                Last updated on {{ site.time | date_to_long_string }}</small>
+            <small>Last updated on {{ site.time | date_to_long_string }}</small>
         </p>
         {% include social-footer.html %}
     </footer>
