@@ -247,11 +247,12 @@ blockquote {
   line-height: 1.1*$base-line-height;
 
   p {
-    margin-bottom: 1.2em;
+    margin-bottom: 0;
   }
 }
 
 .post-meta {
+  margin-block-start: 0.2em;
   color: lighten($text-color, 25%);
   @media (prefers-color-scheme: dark) {
       color: lighten($text-color-dark, 20%);
