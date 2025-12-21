@@ -1,7 +1,7 @@
 ---
 title: 养大一只猫
 category: life
-description: 
+description: 看小五睡觉是一件非常治愈的事，他明明什么都没做，我却会因此感到平静和美好。
 ---
 今年年初的时候，我决定养一只橘猫。
 
