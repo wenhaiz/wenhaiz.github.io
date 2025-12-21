@@ -12,8 +12,12 @@ footer {
 
 /* Footer copyrights */
 .copy {
-    color: #aaa;
+    color: lighten($text-color, 50%);
     text-align: center;
     font-size: smaller;
+    @media (prefers-color-scheme:dark){
+        color: lighten($text-color, 20%);
+
+    }
 }
 
