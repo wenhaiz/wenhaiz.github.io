@@ -4,7 +4,16 @@
   text-align: center;
 }
 
-.rounded-social-buttons .social-button {
+.rounded-social-buttons .social-button-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.rounded-social-buttons .social-button-wrapper:last-child {
+  margin-right: 0;
+}
+
+.rounded-social-buttons .social-button-wrapper .social-button {
   display: inline-block;
   position: relative;
   cursor: pointer;
@@ -15,7 +24,7 @@
   text-decoration: none;
   text-align: center;
   color: #fefefe;
-  font-size: 1.5625rem;
+  font-size: 1.4rem;
   font-weight: normal;
   line-height: 1.5em;
   border-radius: 1.6875rem;
@@ -71,6 +80,69 @@
   color: #000000;
   background: #fefefe;
   border-color: #000000;
+}
+
+.rounded-social-buttons .social-button.wechat {
+  background: #1aad19;
+}
+
+.rounded-social-buttons .social-button.wechat:hover, .rounded-social-buttons .social-button.wechat:focus {
+  color: #1aad19;
+  background: #fefefe;
+  border-color: #1aad19;
+}
+
+.rounded-social-buttons .social-button.wechat-personal {
+  background: #009688;
+}
+
+.rounded-social-buttons .social-button.wechat-personal:hover, .rounded-social-buttons .social-button.wechat-personal:focus {
+  color: #009688;
+  background: #fefefe;
+  border-color: #009688;
+}
+
+.rounded-social-buttons .wechat-tooltip {
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  display: none;
+  z-index: 10;
+  width: max-content;
+  white-space: nowrap;
+}
+
+@media (prefers-color-scheme: dark) {
+  .rounded-social-buttons .wechat-tooltip {
+    background: #2c2c2c;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.rounded-social-buttons .wechat-tooltip img {
+  max-width: 140px;
+  display: block;
+}
+
+.rounded-social-buttons .wechat-tooltip small {
+  display: block;
+  color: #555;
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+
+  @media (prefers-color-scheme: dark) {
+    color: #ddd;
+  }
+}
+
+.rounded-social-buttons .social-button-wrapper:hover .wechat-tooltip,
+.rounded-social-buttons .social-button-wrapper:focus-within .wechat-tooltip {
+  display: block;
 }
 
 .rounded-social-buttons .social-button.email {

@@ -17,6 +17,8 @@ excerpt_separator: <!--more-->
 
 # Social footer links
 github: "wenhaiz"
+wechat_official_qrcode: "/assets/images/wx_official_qrcode.jpg"
+wechat_personal_qrcode: "/assets/images/wx_qrcode.jpg"
 
 # Markdown & assets
 markdown: kramdown
