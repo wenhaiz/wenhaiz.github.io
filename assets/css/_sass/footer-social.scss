@@ -2,15 +2,17 @@
 
 .rounded-social-buttons {
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .rounded-social-buttons .social-button-wrapper {
   position: relative;
   display: inline-block;
-}
-
-.rounded-social-buttons .social-button-wrapper:last-child {
-  margin-right: 0;
+  margin: 0;
 }
 
 .rounded-social-buttons .social-button-wrapper .social-button {
@@ -29,7 +31,6 @@
   line-height: 1.5em;
   border-radius: 1.6875rem;
   transition: all 0.5s ease;
-  margin-right: 1rem;
 }
 
 .rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {

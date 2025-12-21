@@ -4,7 +4,8 @@
   display: none;
 }
 .rounded-social-buttons .social-button-wrapper:hover .wechat-tooltip,
-.rounded-social-buttons .social-button-wrapper:focus-within .wechat-tooltip {
+.rounded-social-buttons .social-button-wrapper:focus-within .wechat-tooltip,
+.rounded-social-buttons .social-button-wrapper.is-open .wechat-tooltip {
   display: block;
 }
 </style>
@@ -32,7 +33,7 @@ target="_blank">
 
 
 {%- if site.wechat_official_qrcode -%}
-<span class="social-button-wrapper">
+<span class="social-button-wrapper" data-tooltip-target="wechat-official">
 <a title="WeChat Official Account"
 class="social-button wechat" href="#" role="button" onclick="return false;">
 <i class="fas fa-qrcode"></i>
@@ -45,7 +46,7 @@ class="social-button wechat" href="#" role="button" onclick="return false;">
 {%- endif -%}
 
 {%- if site.wechat_personal_qrcode -%}
-<span class="social-button-wrapper">
+<span class="social-button-wrapper" data-tooltip-target="wechat-personal">
 <a title="WeChat Personal"
 class="social-button wechat-personal" href="#" role="button" onclick="return false;">
 <i class="fas fa-comments"></i>
@@ -145,5 +146,35 @@ target="_blank">
 </span>
 {%- endif -%}
 
+<script>
+(function() {
+  var tooltipWrappers = document.querySelectorAll('.rounded-social-buttons .social-button-wrapper[data-tooltip-target]');
+  if (!tooltipWrappers.length) { return; }
+
+  var closeAll = function() {
+    tooltipWrappers.forEach(function(wrapper) { wrapper.classList.remove('is-open'); });
+  };
+
+  tooltipWrappers.forEach(function(wrapper) {
+    var trigger = wrapper.querySelector('.social-button');
+    if (!trigger) { return; }
+
+    trigger.addEventListener('click', function(event) {
+      event.preventDefault();
+      var alreadyOpen = wrapper.classList.contains('is-open');
+      closeAll();
+      if (!alreadyOpen) {
+        wrapper.classList.add('is-open');
+      }
+    });
+  });
+
+  document.addEventListener('click', function(event) {
+    if (!event.target.closest('.rounded-social-buttons .social-button-wrapper[data-tooltip-target]')) {
+      closeAll();
+    }
+  });
+})();
+</script>
 
 </div>
