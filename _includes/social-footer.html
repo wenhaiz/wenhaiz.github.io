@@ -1,92 +1,139 @@
 <div class="rounded-social-buttons">
 
 {%- if site.email -%}
+<span class="social-button-wrapper">
 <a title="{{ _locale_string_email }}"
 class="social-button email" itemprop="email"
 href="mailto:{{ site.email }}">
 <i class="far fa-envelope"></i>
 </a>
+</span>
 {%- endif -%}
 
 {%- if site.linkedin -%}
+<span class="social-button-wrapper">
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'LinkedIn' }}"
 class="social-button linkedin"
 href="https://www.linkedin.com/in/{{ site.linkedin }}" itemprop="sameAs"
 target="_blank">
 <i class="fab fa-linkedin"></i>
 </a>
+</span>
+{%- endif -%}
+
+
+{%- if site.wechat_official_qrcode -%}
+<span class="social-button-wrapper">
+<a title="WeChat Official Account"
+class="social-button wechat" href="#" role="button" onclick="return false;">
+<i class="fas fa-qrcode"></i>
+</a>
+<span class="wechat-tooltip">
+  <img src="{{ site.wechat_official_qrcode | relative_url }}" alt="WeChat official account QR code">
+  <small>扫码关注我的微信公众号</small>
+</span>
+</span>
+{%- endif -%}
+
+{%- if site.wechat_personal_qrcode -%}
+<span class="social-button-wrapper">
+<a title="WeChat Personal"
+class="social-button wechat-personal" href="#" role="button" onclick="return false;">
+<i class="fas fa-comments"></i>
+</a>
+<span class="wechat-tooltip">
+  <img src="{{ site.wechat_personal_qrcode | relative_url }}" alt="WeChat personal QR code">
+  <small>扫码添加我为微信好友</small>
+</span>
+</span>
 {%- endif -%}
 
 {%- if site.github -%}
+<span class="social-button-wrapper">
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'GitHub' }}"
 class="social-button github"
 href="https://github.com/{{ site.github }}" itemprop="sameAs"
 target="_blank">
 <i class="fab fa-github"></i>
 </a>
+</span>
 {%- endif -%}
 
 {%- if site.researchgate -%}
+<span class="social-button-wrapper">
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'ResearchGate' }}"
 class="social-button researchgate"
 href="https://www.researchgate.net/profile/{{ site.researchgate }}" itemprop="sameAs"
 target="_blank">
 <i class="fab fa-researchgate"></i>
 </a>
+</span>
 {%- endif -%}
 
 {%- if site.orcid -%}
+<span class="social-button-wrapper">
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'Orcid' }}"
 class="social-button orcid"
 href="https://orcid.org/{{ site.orcid }}" itemprop="sameAs"
 target="_blank">
 <i class="fab fa-orcid"></i>
 </a>
+</span>
 {%- endif -%}
 
 {%- if site.facebook -%}
+<span class="social-button-wrapper">
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'Facebook' }}"
 class="social-button facebook" itemprop="sameAs"
 href="https://www.facebook.com/{{ site.facebook }}"
 target="_blank">
 <i class="fab fa-facebook-f"></i>
 </a>
+</span>
 {%- endif -%}
 
 {%- if site.bluesky -%}
+<span class="social-button-wrapper">
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'Bluesky' }}"
 class="social-button bluesky" itemprop="sameAs"
 href="https://bsky.app/profile/{{ site.bluesky }}"
 target="_blank">
 <i class="fab fa-bluesky"></i>
 </a>
+</span>
 {%- endif -%}
 
 {%- if site.quora -%}
+<span class="social-button-wrapper">
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'Quora' }}"
 class="social-button quora" itemprop="sameAs"
 href="https://www.quora.com/profile/{{ site.quora }}"
 target="_blank">
 <i class="fab fa-quora"></i>
 </a>
+</span>
 {%- endif -%}
 
 {%- if site.instagram -%}
+<span class="social-button-wrapper">
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'Instagram' }}"
 class="social-button instagram" itemprop="sameAs"
 href="https://www.instagram.com/{{ site.instagram }}"
 target="_blank">
 <i class="fab fa-instagram"></i>
 </a>
+</span>
 {%- endif -%}
 
 {%- if site.stackoverflow -%}
+<span class="social-button-wrapper">
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'Stackoverflow' }}"
 class="social-button stackoverflow" itemprop="sameAs"
 href="https://stackoverflow.com/users/{{ site.stackoverflow }}"
 target="_blank">
 <i class="fab fa-brands fa-stack-overflow"></i>
 </a>
+</span>
 {%- endif -%}
 
 
