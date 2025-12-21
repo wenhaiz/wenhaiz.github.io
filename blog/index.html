@@ -6,10 +6,11 @@ layout: default
   {% for post in paginator.posts %}
     <div class="article-list__item">
     <h3 class="post-title"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h3>
-    <p class="post-meta">{{ post.date | date: '%Y-%m-%d' }}</p>
-    {% if post.description and post.description != '' %}
+     {% if post.description and post.description != '' %}
     <p class="post-summary">{{ post.description | markdownify | strip_html }}</p>
     {% endif %}
+    <p class="post-meta">{{ post.date | date: '%Y-%m-%d' }}</p>
+   
     </div>
   {% endfor %}
 </div>
