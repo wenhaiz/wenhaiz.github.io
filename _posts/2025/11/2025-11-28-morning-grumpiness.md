@@ -1,7 +1,7 @@
 ---
 title: 起床气
 category: life
-description: 
+description: 据我观察，猫就没有起床气。
 ---
 
 闹钟响了就立刻起床，这件事我一直都做不到。我总得带着点抗拒情绪在床上磨蹭一会儿，然后再起床。
