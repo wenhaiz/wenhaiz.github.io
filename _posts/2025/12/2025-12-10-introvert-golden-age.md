@@ -1,7 +1,7 @@
 ---
 title: i 人的「黄金时代」
 category: life
-description: 
+description: 作为一个 i 人，我觉得我们社会的发展对 i 人真的越来越友好了。
 ---
 作为一个 i 人，我觉得我们社会的发展对 i 人真的越来越友好了。
 

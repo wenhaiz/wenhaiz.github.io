@@ -1,7 +1,7 @@
 ---
 title: 选择写作，选择日更
 category: life
-description: 
+description: 我就这么开始了「日更」这样一件在我之前看来很恐怖的事。
 ---
 这不是我第一次尝试写作了。
 

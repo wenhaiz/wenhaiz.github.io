@@ -1,6 +1,6 @@
 ---
 title: 日更的疲惫
-description: 
+description: 今天的文章写了就是写了，不管质量如何，它就是我在今天的状态下能写出的最好的文章。
 category: life
 ---
 昨天我第一次体验到了日更的疲惫。

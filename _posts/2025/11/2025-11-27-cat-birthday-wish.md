@@ -1,7 +1,7 @@
 ---
 title: 一只猫的生日祝福
 category: life
-description: 
+description: 喵
 ---
 今天是我媳妇儿的生日。
 
