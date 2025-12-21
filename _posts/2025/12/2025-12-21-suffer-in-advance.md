@@ -3,7 +3,7 @@ title: 提前找罪受
 category: life
 description: 
 ---
-万万没想到，我调整洗澡时间之后触发了隐藏剧情。
+万万没想到，我[调整洗澡时间](/life/2025/12/17/shower-procrastination/)之后触发了隐藏剧情。
 
 周五晚上，我洗完澡刚准备坐下，就听到有人敲门。
 
