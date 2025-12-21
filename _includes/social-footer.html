@@ -1,4 +1,13 @@
 <div class="rounded-social-buttons">
+<style>
+.rounded-social-buttons .wechat-tooltip {
+  display: none;
+}
+.rounded-social-buttons .social-button-wrapper:hover .wechat-tooltip,
+.rounded-social-buttons .social-button-wrapper:focus-within .wechat-tooltip {
+  display: block;
+}
+</style>
 
 {%- if site.email -%}
 <span class="social-button-wrapper">
