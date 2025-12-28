@@ -1,4 +1,6 @@
+{%- assign lang = page.lang | default: 'zh' -%}
+{%- assign t = site.data.i18n[lang] -%}
 <div class="links scroll">
-        <a href="{{site.baseurl}}/blog/">Blog</a>
-        <a href="{{site.baseurl}}/archive/">Archive</a>
+        <a href="{{ '/blog/' | relative_url }}">{{ t.nav.blog }}</a>
+        <a href="{{ '/archive/' | relative_url }}">{{ t.nav.archive }}</a>
 </div>

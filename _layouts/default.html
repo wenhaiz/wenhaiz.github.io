@@ -1,8 +1,16 @@
 ---
 # layout: compress
 ---
+{%- assign lang = page.lang | default: 'zh' -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- assign seo_site_title = t.site.title | default: site.title -%}
+{%- if page.title and page.title != '' -%}
+{%- assign seo_title = page.title | append: ' | ' | append: seo_site_title -%}
+{%- else -%}
+{%- assign seo_title = seo_site_title -%}
+{%- endif -%}
 <!DOCTYPE html>
-<html>
+<html lang="{{ lang }}">
 
 <head>
     <meta charset="utf-8">
@@ -10,7 +18,10 @@
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ site.baseurl }}/feed.xml">
 
-    {% seo %}
+    <title>{{ seo_title | escape }}</title>
+    <meta property="og:title" content="{{ seo_title | escape }}">
+    <meta name="twitter:title" content="{{ seo_title | escape }}">
+    {% seo title=false %}
 
     {% include favicon.html %}
 
@@ -23,8 +34,15 @@
 </head>
 
 <body>
-    <header>
-        <h1 class="post-headline"><a href="{{ site.baseurl }}/">{{site.title}}</a></h1>
+    <header class="site-header">
+        <div class="header-row">
+            <h1 class="post-headline"><a href="{{ site.baseurl }}/">{{ t.site.title }}</a></h1>
+            <!-- {% if lang == 'en' %}
+            <a class="lang-toggle" href="{{ '/' | relative_url }}">{{ t.nav.switch }}</a>
+            {% else %}
+            <a class="lang-toggle" href="{{ '/en/' | relative_url }}">{{ t.nav.switch }}</a>
+            {% endif %} -->
+        </div>
         <h3 class="post-description">{{site.description}}</h3>
         {% include navigation.html %}
     </header>
@@ -36,7 +54,7 @@
 
     <footer>
         <p class="copy">
-            <small> &copy; {{site.title}} {{ site.time | date: '%Y' }}</small>
+            <small> &copy; {{ t.site.title }} {{ site.time | date: '%Y' }}</small>
             <br />
             <small>Last updated on {{ site.time | date_to_long_string }}</small>
         </p>

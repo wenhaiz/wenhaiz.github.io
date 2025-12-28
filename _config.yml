@@ -71,6 +71,7 @@ defaults:
       type: pages
     values:
       layout: default
+      lang: zh
   -
     scope:
       path: ""
@@ -78,3 +79,4 @@ defaults:
     values:
       layout: post
       excerpt_separator: <!--more-->
+      lang: zh
