@@ -69,13 +69,35 @@ target="_blank">
 </span>
 {%- endif -%}
 
+{%- assign rss_path = '/feed.xml' | relative_url -%}
+{%- if site.url and site.url != '' -%}
+{%- assign rss_url = site.url | append: rss_path -%}
+{%- else -%}
+{%- assign rss_url = rss_path -%}
+{%- endif -%}
 <span class="social-button-wrapper">
 <a title="RSS"
 class="social-button rss"
-href="{{ '/feed.xml' | relative_url }}">
+href="{{ rss_url }}"
+data-rss-trigger>
 <i class="fas fa-rss"></i>
 </a>
 </span>
+
+<div class="rss-modal" data-rss-modal aria-hidden="true">
+  <div class="rss-modal-card" role="dialog" aria-modal="true" aria-labelledby="rss-modal-title">
+    <button class="rss-modal-close" type="button" aria-label="Close RSS dialog">
+      <i class="fas fa-xmark" aria-hidden="true"></i>
+    </button>
+    <h4 id="rss-modal-title">订阅我的 RSS</h4>
+    <p class="rss-modal-description">复制下面的地址到你的 RSS 阅读器：</p>
+    <div class="rss-modal-input">
+      <input type="text" value="{{ rss_url }}" readonly aria-label="RSS subscription URL">
+      <button class="rss-copy-button" type="button" data-default-label="复制">复制</button>
+    </div>
+    <p class="rss-copy-status" role="status" aria-live="polite"></p>
+  </div>
+</div>
 
 {%- if site.researchgate -%}
 <span class="social-button-wrapper">
@@ -157,7 +179,9 @@ target="_blank">
 <script>
 (function() {
   var tooltipWrappers = document.querySelectorAll('.rounded-social-buttons .social-button-wrapper[data-tooltip-target]');
-  if (!tooltipWrappers.length) { return; }
+  var rssTrigger = document.querySelector('.rounded-social-buttons [data-rss-trigger]');
+  var rssModal = document.querySelector('[data-rss-modal]');
+  if (!tooltipWrappers.length && !rssTrigger) { return; }
 
   var closeAll = function() {
     tooltipWrappers.forEach(function(wrapper) { wrapper.classList.remove('is-open'); });
@@ -182,6 +206,81 @@ target="_blank">
       closeAll();
     }
   });
+
+  if (rssTrigger && rssModal) {
+    var rssClose = rssModal.querySelector('.rss-modal-close');
+    var rssCopyButton = rssModal.querySelector('.rss-copy-button');
+    var rssInput = rssModal.querySelector('input');
+    var rssStatus = rssModal.querySelector('.rss-copy-status');
+
+    var openRssModal = function() {
+      rssModal.classList.add('is-open');
+      rssModal.setAttribute('aria-hidden', 'false');
+      if (rssInput) { rssInput.focus(); rssInput.select(); }
+    };
+
+    var closeRssModal = function() {
+      rssModal.classList.remove('is-open');
+      rssModal.setAttribute('aria-hidden', 'true');
+      rssTrigger.focus();
+    };
+
+    rssTrigger.addEventListener('click', function(event) {
+      event.preventDefault();
+      closeAll();
+      openRssModal();
+    });
+
+    if (rssClose) {
+      rssClose.addEventListener('click', function() {
+        closeRssModal();
+      });
+    }
+
+    rssModal.addEventListener('click', function(event) {
+      if (event.target === rssModal) {
+        closeRssModal();
+      }
+    });
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && rssModal.classList.contains('is-open')) {
+        closeRssModal();
+      }
+    });
+
+    if (rssCopyButton && rssInput) {
+      rssCopyButton.addEventListener('click', function() {
+        var textToCopy = rssInput.value;
+        var setStatus = function(message) {
+          rssStatus.textContent = message;
+        };
+
+        var resetButton = function() {
+          setStatus('');
+        };
+
+        var markSuccess = function() {
+          setStatus('已复制到剪贴板。');
+          setTimeout(resetButton, 1500);
+        };
+
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(textToCopy)
+            .then(markSuccess)
+            .catch(function() {
+              rssInput.select();
+              document.execCommand('copy');
+              markSuccess();
+            });
+        } else {
+          rssInput.select();
+          document.execCommand('copy');
+          markSuccess();
+        }
+      });
+    }
+  }
 })();
 </script>
 
