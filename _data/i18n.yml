@@ -1,0 +1,44 @@
+zh:
+  site:
+    title: 赵文海
+  nav:
+    blog: 博客
+    archive: 归档
+    switch: English
+  rss:
+    title: 订阅我的 RSS
+    description: "复制下面的地址到你的 RSS 阅读器："
+    copy: 复制
+    copied_button: 已复制
+    copied_status: 已复制到剪贴板。
+    close_aria: 关闭 RSS 弹窗
+    input_aria: RSS 订阅地址
+  wechat:
+    official_title: 微信公众号
+    personal_title: 微信个人号
+    official_alt: 微信公众号二维码
+    personal_alt: 微信个人号二维码
+    official_hint: 扫码关注我的微信公众号
+    personal_hint: 扫码添加我为微信好友
+en:
+  site:
+    title: Wenhai Zhao
+  nav:
+    blog: Blog
+    archive: Archive
+    switch: 中文
+  rss:
+    title: Subscribe via RSS
+    description: "Copy this URL into your RSS reader:"
+    copy: Copy
+    copied_button: Copied
+    copied_status: Copied to clipboard.
+    close_aria: Close RSS dialog
+    input_aria: RSS subscription URL
+  wechat:
+    official_title: WeChat Official Account
+    personal_title: WeChat Personal
+    official_alt: WeChat Official Account QR code
+    personal_alt: WeChat Personal QR code
+    official_hint: "Scan to follow my \nWeChat Official Account"
+    personal_hint: Scan to add me on WeChat

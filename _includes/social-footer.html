@@ -10,6 +10,9 @@
 }
 </style>
 
+{%- assign lang = page.lang | default: 'zh' -%}
+{%- assign t = site.data.i18n[lang] -%}
+
 {%- if site.email -%}
 <span class="social-button-wrapper">
 <a title="{{ _locale_string_email }}"
@@ -34,26 +37,26 @@ target="_blank">
 
 {%- if site.wechat_official_qrcode -%}
 <span class="social-button-wrapper" data-tooltip-target="wechat-official">
-<a title="WeChat Official Account"
+<a title="{{ t.wechat.official_title }}"
 class="social-button wechat" href="#" role="button" onclick="return false;">
 <i class="fas fa-qrcode"></i>
 </a>
 <span class="wechat-tooltip">
-  <img src="{{ site.wechat_official_qrcode | relative_url }}" alt="WeChat official account QR code">
-  <small>扫码关注我的微信公众号</small>
+  <img src="{{ site.wechat_official_qrcode | relative_url }}" alt="{{ t.wechat.official_alt }}">
+  <small>{{ t.wechat.official_hint }}</small>
 </span>
 </span>
 {%- endif -%}
 
 {%- if site.wechat_personal_qrcode -%}
 <span class="social-button-wrapper" data-tooltip-target="wechat-personal">
-<a title="WeChat Personal"
+<a title="{{ t.wechat.personal_title }}"
 class="social-button wechat-personal" href="#" role="button" onclick="return false;">
 <i class="fas fa-comments"></i>
 </a>
 <span class="wechat-tooltip">
-  <img src="{{ site.wechat_personal_qrcode | relative_url }}" alt="WeChat personal QR code">
-  <small>扫码添加我为微信好友</small>
+  <img src="{{ site.wechat_personal_qrcode | relative_url }}" alt="{{ t.wechat.personal_alt }}">
+  <small>{{ t.wechat.personal_hint }}</small>
 </span>
 </span>
 {%- endif -%}
@@ -86,16 +89,16 @@ data-rss-trigger>
 
 <div class="rss-modal" data-rss-modal aria-hidden="true">
   <div class="rss-modal-card" role="dialog" aria-modal="true" aria-labelledby="rss-modal-title">
-    <button class="rss-modal-close" type="button" aria-label="Close RSS dialog">
+    <button class="rss-modal-close" type="button" aria-label="{{ t.rss.close_aria }}">
       <i class="fas fa-xmark" aria-hidden="true"></i>
     </button>
-    <h4 id="rss-modal-title">订阅我的 RSS</h4>
-    <p class="rss-modal-description">复制下面的地址到你的 RSS 阅读器：</p>
+    <h4 id="rss-modal-title">{{ t.rss.title }}</h4>
+    <p class="rss-modal-description">{{ t.rss.description }}</p>
     <div class="rss-modal-input">
-      <input type="text" value="{{ rss_url }}" readonly aria-label="RSS subscription URL">
-      <button class="rss-copy-button" type="button" data-default-label="复制">复制</button>
+      <input type="text" value="{{ rss_url }}" readonly aria-label="{{ t.rss.input_aria }}">
+      <button class="rss-copy-button" type="button" data-default-label="{{ t.rss.copy }}" data-copied-label="{{ t.rss.copied_button }}">{{ t.rss.copy }}</button>
     </div>
-    <p class="rss-copy-status" role="status" aria-live="polite"></p>
+    <p class="rss-copy-status" role="status" aria-live="polite" data-copied-status="{{ t.rss.copied_status }}"></p>
   </div>
 </div>
 
@@ -253,15 +256,19 @@ target="_blank">
       rssCopyButton.addEventListener('click', function() {
         var textToCopy = rssInput.value;
         var setStatus = function(message) {
-          rssStatus.textContent = message;
+          if (rssStatus) { rssStatus.textContent = message; }
         };
 
         var resetButton = function() {
+          rssCopyButton.textContent = rssCopyButton.getAttribute('data-default-label') || 'Copy';
           setStatus('');
         };
 
         var markSuccess = function() {
-          setStatus('已复制到剪贴板。');
+          var copiedLabel = rssCopyButton.getAttribute('data-copied-label') || 'Copied';
+          var copiedStatus = (rssStatus && rssStatus.getAttribute('data-copied-status')) || 'Copied to clipboard.';
+          rssCopyButton.textContent = copiedLabel;
+          setStatus(copiedStatus);
           setTimeout(resetButton, 1500);
         };
 

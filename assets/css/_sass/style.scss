@@ -188,6 +188,29 @@ blockquote {
   display: none;
 }
 
+.site-header .header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-header .post-headline {
+  margin-bottom: 0;
+}
+
+.lang-toggle {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
+
+  @media (prefers-color-scheme: dark) {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
 
 /* Button */
 .simplebutton {

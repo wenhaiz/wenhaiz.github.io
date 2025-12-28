@@ -1,6 +1,7 @@
 ---
 layout: about
 permalink: /
+lang: zh
 profile:
   align: right
   image: profile.jpg
