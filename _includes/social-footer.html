@@ -69,6 +69,14 @@ target="_blank">
 </span>
 {%- endif -%}
 
+<span class="social-button-wrapper">
+<a title="RSS"
+class="social-button rss"
+href="{{ '/feed.xml' | relative_url }}">
+<i class="fas fa-rss"></i>
+</a>
+</span>
+
 {%- if site.researchgate -%}
 <span class="social-button-wrapper">
 <a title="{{ _locale_string_follow | replace: '[NAME]', 'ResearchGate' }}"
