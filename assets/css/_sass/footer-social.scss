@@ -56,7 +56,8 @@
 .fa-envelope,
 .fa-quora,
 .fa-instagram,
-.fa-stack-overflow {
+.fa-stack-overflow,
+.fa-rss {
   font-size: 25px;
 }
 
@@ -189,4 +190,11 @@
   color: #fff;
   background: #f48024;
   border-color: #f48024;
+}
+
+.rounded-social-buttons .social-button.rss:hover,
+.rounded-social-buttons .social-button.rss:focus {
+  color: #fff;
+  background: #f26522;
+  border-color: #f26522;
 }
