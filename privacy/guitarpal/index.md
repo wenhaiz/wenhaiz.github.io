@@ -4,7 +4,7 @@ title: GuitarPal Privacy Policy
 ---
 # GuitarPal Privacy Policy
 
-Effective date: 2026-01-18
+Effective date: 2026-03-05
 
 GuitarPal respects your privacy.
 
@@ -19,14 +19,28 @@ identifiable information.
 - No advertising identifiers
 - No third-party analytics services
 
-## Local Data
+## Microphone Access and Recording
 
-All practice data (such as practice sessions, exercises, and statistics)
-is stored locally on your device and is not transmitted to any servers.
+GuitarPal requests microphone access only when you actively use recording
+features. The microphone is used to record your practice audio for in-app
+practice purposes (such as playback and comparison during practice).
 
-## Third-Party Services
+## Local Data Storage
 
-GuitarPal does not use third-party analytics or advertising SDKs.
+All practice data (such as practice sessions, exercises, statistics, and audio
+recordings) is stored locally on your device. GuitarPal does not upload your
+recordings or other practice data to developer servers.
+
+## Third-Party Services and Sharing
+
+GuitarPal does not use third-party analytics or advertising SDKs, and does not
+share your recordings with third parties.
+
+## Your Controls
+
+- You can delete recordings inside the app at any time.
+- You can disable microphone permission in system settings at any time (recording
+  features will no longer be available until permission is re-enabled).
 
 ## Changes to This Policy
 
