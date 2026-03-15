@@ -17,7 +17,6 @@ identifiable information.
 - No location data
 - No contacts or photos
 - No advertising identifiers
-- No third-party analytics services
 
 ## Microphone Access and Recording
 
@@ -33,8 +32,9 @@ recordings or other practice data to developer servers.
 
 ## Third-Party Services and Sharing
 
-GuitarPal does not use third-party analytics or advertising SDKs, and does not
-share your recordings with third parties.
+GuitarPal may collect anonymous usage data for product analytics and to improve
+the app experience. This data is not used for advertising, and GuitarPal does
+not share your recordings or other practice content with third parties.
 
 ## Your Controls
 
