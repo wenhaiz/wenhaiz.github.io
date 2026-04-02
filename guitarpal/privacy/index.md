@@ -17,7 +17,6 @@ identifiable information.
 - No location data
 - No contacts or photos
 - No advertising identifiers
-- No third-party analytics services
 
 ## Microphone Access and Recording
 
