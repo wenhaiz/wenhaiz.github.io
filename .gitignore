@@ -1,6 +1,7 @@
 _site/
 .sass-cache/
 .jekyll-metadata
+vendor/
 garth-jekyll-theme-*.gem
 Gemfile.lock
 **/Gemfile.lock
