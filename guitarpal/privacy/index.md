@@ -7,7 +7,7 @@ alternate_label: 中文
 ---
 # GuitarPal Privacy Policy
 
-Effective date: 2026-07-14
+Effective date: 2026-08-13
 
 GuitarPal respects your privacy.
 
@@ -33,22 +33,27 @@ By default, GuitarPal stores your practice data locally on your device.
 
 If you choose to turn on iCloud Sync, structured practice data such as practice
 sessions, exercises, practice history, statistics, and backing track metadata
-is stored in your private iCloud account through Apple's CloudKit service. This
-allows the data to sync between devices signed in with the same Apple Account.
+is stored in your private iCloud account through Apple's CloudKit service.
+Imported backing track audio files are also stored in your iCloud account. This
+allows your practice data and backing tracks to sync
+between devices signed in with the same Apple Account. Backing tracks may need
+to be downloaded before use on another device and use storage in your iCloud
+account.
 
-Audio recordings and imported backing track files remain on your device and are
-not uploaded to iCloud. GuitarPal does not upload your practice data or audio
-files to developer-operated servers.
+Audio recordings remain on your device and are not uploaded to iCloud. GuitarPal
+does not upload your practice data or audio files to developer-operated servers.
 
 ## iCloud Sync
 
-iCloud Sync is optional and is turned off by default. GuitarPal uses Apple's
-iCloud and CloudKit services only after you turn on iCloud Sync in the app.
+iCloud Sync is optional and can be controlled in GuitarPal settings. GuitarPal
+uses Apple's iCloud and CloudKit services only while iCloud Sync is enabled.
 Apple processes iCloud data according to its own privacy policy and service
 terms.
 
 Turning off iCloud Sync stops future syncing after the next time you open the
-app. It does not automatically delete data already stored locally or in iCloud.
+app. It does not automatically delete data or backing track files already stored
+locally or in iCloud. Backing tracks already downloaded to the device remain
+available locally.
 
 ## Third-Party Services and Sharing
 
@@ -61,6 +66,9 @@ not share your recordings or other practice content with third parties.
 - You can turn iCloud Sync on or off in GuitarPal settings.
 - You can delete practice data inside the app. When iCloud Sync is enabled,
   those deletions are also synchronized through iCloud.
+- You can delete imported backing tracks inside the app. When iCloud Sync is
+  enabled, GuitarPal also removes the corresponding file from your iCloud
+  account and synchronizes the deletion to your other devices.
 - You can delete recordings inside the app at any time.
 - You can disable microphone permission in system settings at any time (recording
   features will no longer be available until permission is re-enabled).
