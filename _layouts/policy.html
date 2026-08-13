@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport">
   <title>{{ page.title | escape }}</title>
   <style>
     :root {
@@ -12,45 +12,60 @@
 
     body {
       margin: 0;
-      padding: 24px;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.7;
-      background: #f7f7f7;
+      background: #fff;
       color: #222;
     }
 
     .policy-page {
-      max-width: 760px;
+      max-width: 720px;
       margin: 0 auto;
-      background: #fff;
-      padding: 32px 24px;
-      border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      padding: 48px max(24px, env(safe-area-inset-right)) max(48px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left));
     }
 
     .language-switch {
-      margin-bottom: 24px;
+      margin-bottom: 40px;
       text-align: right;
     }
 
-    h1,
+    h1 {
+      margin: 0 0 32px;
+      font-size: clamp(2rem, 7vw, 2.5rem);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
     h2 {
+      margin: 40px 0 12px;
+      font-size: 1.5rem;
       line-height: 1.3;
+    }
+
+    p,
+    ul {
+      margin: 0 0 20px;
     }
 
     a {
       color: #157347;
     }
 
+    @media (max-width: 600px) {
+      .policy-page {
+        padding-top: 32px;
+        padding-bottom: max(32px, env(safe-area-inset-bottom));
+      }
+
+      .language-switch {
+        margin-bottom: 32px;
+      }
+    }
+
     @media (prefers-color-scheme: dark) {
       body {
         background: #111315;
         color: #e8e8e8;
-      }
-
-      .policy-page {
-        background: #1b1f24;
-        box-shadow: none;
       }
 
       a {
