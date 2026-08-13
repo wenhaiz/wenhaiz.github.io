@@ -3,8 +3,6 @@ layout: policy
 title: GuitarPal 隐私政策
 lang: zh-CN
 alternate_url: /guitarpal/privacy/
-alternate_label: English
-language_switch_label: 语言切换
 ---
 # GuitarPal 隐私政策
 

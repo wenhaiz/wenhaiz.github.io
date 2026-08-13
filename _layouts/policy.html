@@ -5,6 +5,19 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport">
   <title>{{ page.title | escape }}</title>
+  {% if page.alternate_url %}
+    <script>
+      (function () {
+        var preferredLanguage = (navigator.languages && navigator.languages[0]) || navigator.language || "en";
+        var prefersChinese = preferredLanguage.toLowerCase().indexOf("zh") === 0;
+        var isChinesePage = document.documentElement.lang.toLowerCase().indexOf("zh") === 0;
+
+        if (prefersChinese !== isChinesePage) {
+          window.location.replace({{ page.alternate_url | relative_url | jsonify }});
+        }
+      }());
+    </script>
+  {% endif %}
   <style>
     :root {
       color-scheme: light dark;
@@ -22,11 +35,6 @@
       max-width: 720px;
       margin: 0 auto;
       padding: 48px max(24px, env(safe-area-inset-right)) 0 max(24px, env(safe-area-inset-left));
-    }
-
-    .language-switch {
-      margin-bottom: 40px;
-      text-align: right;
     }
 
     h1 {
@@ -55,10 +63,6 @@
       .policy-page {
         padding-top: 32px;
       }
-
-      .language-switch {
-        margin-bottom: 32px;
-      }
     }
 
     @media (prefers-color-scheme: dark) {
@@ -76,11 +80,6 @@
 
 <body>
   <main class="policy-page">
-    {% if page.alternate_url and page.alternate_label %}
-      <nav class="language-switch" aria-label="{{ page.language_switch_label | default: 'Language switch' | escape }}">
-        <a href="{{ page.alternate_url | relative_url }}">{{ page.alternate_label | escape }}</a>
-      </nav>
-    {% endif %}
     {{ content }}
   </main>
 </body>
