@@ -21,7 +21,7 @@
     .policy-page {
       max-width: 720px;
       margin: 0 auto;
-      padding: 48px max(24px, env(safe-area-inset-right)) max(48px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left));
+      padding: 48px max(24px, env(safe-area-inset-right)) 0 max(24px, env(safe-area-inset-left));
     }
 
     .language-switch {
@@ -54,7 +54,6 @@
     @media (max-width: 600px) {
       .policy-page {
         padding-top: 32px;
-        padding-bottom: max(32px, env(safe-area-inset-bottom));
       }
 
       .language-switch {
