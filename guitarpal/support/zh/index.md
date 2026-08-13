@@ -3,8 +3,6 @@ layout: policy
 title: GuitarPal 联系支持
 lang: zh-CN
 alternate_url: /guitarpal/support/
-alternate_label: English
-language_switch_label: 语言切换
 ---
 # GuitarPal 联系支持
 

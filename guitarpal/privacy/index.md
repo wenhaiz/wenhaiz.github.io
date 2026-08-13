@@ -3,7 +3,6 @@ layout: policy
 title: GuitarPal Privacy Policy
 lang: en
 alternate_url: /guitarpal/privacy/zh/
-alternate_label: 中文
 ---
 # GuitarPal Privacy Policy
 

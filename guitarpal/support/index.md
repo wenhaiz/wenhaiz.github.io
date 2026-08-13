@@ -3,7 +3,6 @@ layout: policy
 title: GuitarPal Support
 lang: en
 alternate_url: /guitarpal/support/zh/
-alternate_label: 中文
 ---
 # GuitarPal Support
 
