@@ -1,14 +1,12 @@
 ---
-layout: policy
+layout: null
 title: GuitarPal Support
 lang: en
-alternate_url: /guitarpal/support/zh/
 ---
-# GuitarPal Support
+<link rel="canonical" href="https://guitarpal.app/support/">
+<meta http-equiv="refresh" content="0; url=https://guitarpal.app/support/">
+<script>
+  window.location.replace("https://guitarpal.app/support/");
+</script>
 
-If you have questions, feedback, or encounter any issues while using GuitarPal,
-please contact us:
-
-**Email:** [wenhaiz.me@gmail.com](mailto:wenhaiz.me@gmail.com)
-
-We will do our best to respond within a reasonable time.
+<p>This page has moved to <a href="https://guitarpal.app/support/">GuitarPal Support</a>.</p>

@@ -1,11 +1,12 @@
 ---
 layout: null
 title: GuitarPal Support
+lang: en
 ---
+<link rel="canonical" href="https://guitarpal.app/support/">
+<meta http-equiv="refresh" content="0; url=https://guitarpal.app/support/">
 <script>
-  window.location.replace("/guitarpal/support/");
+  window.location.replace("https://guitarpal.app/support/");
 </script>
 
-# GuitarPal Support
-
-This page has moved to [GuitarPal Support](/guitarpal/support/).
+<p>This page has moved to <a href="https://guitarpal.app/support/">GuitarPal Support</a>.</p>
