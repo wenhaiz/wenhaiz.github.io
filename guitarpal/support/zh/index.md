@@ -1,13 +1,12 @@
 ---
-layout: policy
+layout: null
 title: GuitarPal 联系支持
 lang: zh-CN
-alternate_url: /guitarpal/support/
 ---
-# GuitarPal 联系支持
+<link rel="canonical" href="https://guitarpal.app/support/zh/">
+<meta http-equiv="refresh" content="0; url=https://guitarpal.app/support/zh/">
+<script>
+  window.location.replace("https://guitarpal.app/support/zh/");
+</script>
 
-如果您在使用 GuitarPal 时有任何疑问、反馈或遇到问题，请联系我们：
-
-**电子邮箱：** [wenhaiz.me@gmail.com](mailto:wenhaiz.me@gmail.com)
-
-我们会尽力在合理的时间内回复。
+<p>此页面已迁移至<a href="https://guitarpal.app/support/zh/">GuitarPal 联系支持</a>。</p>
