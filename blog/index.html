@@ -1,43 +1,33 @@
 ---
 layout: default
+title: 所有文章
 ---
-
-<div class="article-list">
-  {% for post in paginator.posts %}
-    <div class="article-list__item">
-    <h3 class="post-title"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h3>
-     {% if post.description and post.description != '' %}
-    <p class="post-summary">{{ post.description | markdownify | strip_html }}</p>
-    {% endif %}
-    <p class="post-meta">{{ post.date | date: '%Y-%m-%d' }}</p>
-   
-    </div>
-  {% endfor %}
-</div>
+<h1 class="page-title">所有文章</h1>
+{% include post-list.html posts=paginator.posts heading_level=2 %}
 
 <!-- pagination -->
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+    <a href="{{ paginator.previous_page_path | relative_url }}" aria-label="上一页">&larr;</a>
   {% else %}
-    <span>&laquo; Prev</span>
+    <span aria-hidden="true">&larr;</span>
   {% endif %}
 
   {% for page in (1..paginator.total_pages) %}
     {% if page == paginator.page %}
       <span>{{ page }}</span>
     {% elsif page == 1 %}
-      <a href="{{site.baseurl}}/blog">{{ page }}</a>
+      <a href="{{ '/blog/' | relative_url }}">{{ page }}</a>
     {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+      <a href="{{ site.paginate_path | replace: ':num', page | relative_url }}">{{ page }}</a>
     {% endif %}
   {% endfor %}
 
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+    <a href="{{ paginator.next_page_path | relative_url }}" aria-label="下一页">&rarr;</a>
   {% else %}
-    <span>Next &raquo;</span>
+    <span aria-hidden="true">&rarr;</span>
   {% endif %}
 </div>
 {% endif %}

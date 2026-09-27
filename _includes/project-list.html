@@ -1,0 +1,12 @@
+{% assign heading_level = include.heading_level | default: 3 %}
+<div class="project-list">
+  {% for project in site.data.projects %}
+  <article class="project-item">
+    <img src="{{ project.icon | relative_url }}" alt="" width="64" height="64" loading="lazy">
+    <div>
+      <h{{ heading_level }}><a href="{{ project.url }}">{{ project.name }}</a></h{{ heading_level }}>
+      <p>{{ project[page.lang].description }}</p>
+    </div>
+  </article>
+  {% endfor %}
+</div>
