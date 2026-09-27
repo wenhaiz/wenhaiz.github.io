@@ -1,0 +1,16 @@
+{%- assign posts_by_year = site.posts | group_by_exp: 'post', "post.date | date: '%Y'" -%}
+<div class="archive-list">
+  {% for year in posts_by_year %}
+  <section class="archive-year" id="year-{{ year.name }}" aria-labelledby="year-heading-{{ year.name }}">
+    <h3 id="year-heading-{{ year.name }}">{{ year.name }}</h3>
+    <div class="archive-year-posts">
+      {% for post in year.items %}
+      <div class="archive-item">
+        <a href="{{ post.url | relative_url }}" lang="{{ post.lang | default: 'zh' }}">{{ post.title }}</a>
+        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%m-%d' }}</time>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+</div>

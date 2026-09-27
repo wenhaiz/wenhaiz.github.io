@@ -1,0 +1,7 @@
+- name: GuitarPal
+  url: https://guitarpal.app/
+  icon: /assets/images/guitarpal-app-icon.png
+  zh:
+    description: 把吉他练习整理成清晰的计划，专注完成每次练习，并记录长期进步。
+  en:
+    description: Plan focused guitar practice sessions and keep track of the work you put in.

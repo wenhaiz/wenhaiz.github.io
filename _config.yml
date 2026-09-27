@@ -60,9 +60,6 @@ plugins:
 collections:
   posts:
     output: true
-  projects:
-    output: true
-    permalink: /projects/:name/
 
 defaults:
   -

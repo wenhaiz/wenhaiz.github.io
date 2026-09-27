@@ -1,0 +1,9 @@
+{% assign heading_level = include.heading_level | default: 3 %}
+<div class="post-list">
+  {% for post in include.posts %}
+  <article class="post-list-item">
+    <h{{ heading_level }}><a href="{{ post.url | relative_url }}" lang="{{ post.lang | default: 'zh' }}">{{ post.title }}</a></h{{ heading_level }}>
+    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y-%m-%d' }}</time>
+  </article>
+  {% endfor %}
+</div>

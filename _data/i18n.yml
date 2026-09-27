@@ -1,10 +1,21 @@
 zh:
   site:
     title: 赵文海
+    tagline: 软件工程师，写作者。
   nav:
-    blog: 博客
-    archive: 归档
+    label: 网站栏目
+    skip: 跳转到正文
+    articles: 文章
+    projects: 项目
+    about: 关于
     switch: English
+  home:
+    about:
+      - 你好，我是赵文海。我喜欢通过文字记录生活与思考，也喜欢阅读、听音乐、弹吉他，最近在学习 Blues 即兴演奏。
+      - 我和妻子生活在北京，养了一只橘猫，叫「小五」。这里会持续更新我的文章和作品。
+      - 如果你想与我交流，可以通过页面下方的方式联系我。
+  footer:
+    connect: 联系我
   rss:
     title: 订阅我的 RSS
     description: "复制下面的地址到你的 RSS 阅读器："
@@ -23,10 +34,21 @@ zh:
 en:
   site:
     title: Wenhai Zhao
+    tagline: Software engineer and writer.
   nav:
-    blog: Blog
-    archive: Archive
+    label: Site sections
+    skip: Skip to content
+    articles: Writing
+    projects: Projects
+    about: About
     switch: 中文
+  home:
+    about:
+      - Hi, I'm Wenhai Zhao. I write about life and thoughts, and I enjoy reading, music, and guitar. Recently, I've been learning blues improvisation.
+      - My wife and I live in Beijing with our orange cat, Xiao Wu. I'll keep sharing my writing and projects here.
+      - If you'd like to talk, you can reach me through the links below.
+  footer:
+    connect: Connect
   rss:
     title: Subscribe via RSS
     description: "Copy this URL into your RSS reader:"

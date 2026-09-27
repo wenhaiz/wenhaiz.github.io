@@ -1,0 +1,23 @@
+---
+layout: default
+---
+{%- assign t = site.data.i18n[page.lang] -%}
+<div class="home-sections" data-home-sections>
+  <section class="home-section" id="articles" data-home-section aria-labelledby="articles-heading">
+    <h2 class="section-heading" id="articles-heading">{{ t.nav.articles }}</h2>
+    {% include archive-list.html %}
+  </section>
+
+  <section class="home-section" id="projects" data-home-section aria-labelledby="projects-heading">
+    <h2 class="section-heading" id="projects-heading">{{ t.nav.projects }}</h2>
+    {% include project-list.html %}
+  </section>
+
+  <section class="home-section" id="about" data-home-section aria-labelledby="about-heading">
+    <h2 class="section-heading" id="about-heading">{{ t.nav.about }}</h2>
+    <div class="about-copy">
+      {% for paragraph in t.home.about %}<p>{{ paragraph }}</p>{% endfor %}
+    </div>
+  </section>
+</div>
+<script src="{{ '/assets/js/home-sections.js' | relative_url }}" defer></script>

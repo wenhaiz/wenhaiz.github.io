@@ -15,7 +15,7 @@
 
 {%- if site.email -%}
 <span class="social-button-wrapper">
-<a title="{{ _locale_string_email }}"
+<a title="Email" aria-label="Email"
 class="social-button email" itemprop="email"
 href="mailto:{{ site.email }}">
 <i class="far fa-envelope"></i>
@@ -37,7 +37,7 @@ target="_blank">
 
 {%- if site.wechat_official_qrcode -%}
 <span class="social-button-wrapper" data-tooltip-target="wechat-official">
-<a title="{{ t.wechat.official_title }}"
+<a title="{{ t.wechat.official_title }}" aria-label="{{ t.wechat.official_title }}"
 class="social-button wechat" href="#" role="button" onclick="return false;">
 <i class="fas fa-qrcode"></i>
 </a>
@@ -50,7 +50,7 @@ class="social-button wechat" href="#" role="button" onclick="return false;">
 
 {%- if site.wechat_personal_qrcode -%}
 <span class="social-button-wrapper" data-tooltip-target="wechat-personal">
-<a title="{{ t.wechat.personal_title }}"
+<a title="{{ t.wechat.personal_title }}" aria-label="{{ t.wechat.personal_title }}"
 class="social-button wechat-personal" href="#" role="button" onclick="return false;">
 <i class="fas fa-comments"></i>
 </a>
@@ -63,7 +63,7 @@ class="social-button wechat-personal" href="#" role="button" onclick="return fal
 
 {%- if site.github -%}
 <span class="social-button-wrapper">
-<a title="{{ _locale_string_follow | replace: '[NAME]', 'GitHub' }}"
+<a title="GitHub" aria-label="GitHub"
 class="social-button github"
 href="https://github.com/{{ site.github }}" itemprop="sameAs"
 target="_blank">
@@ -79,7 +79,7 @@ target="_blank">
 {%- assign rss_url = rss_path -%}
 {%- endif -%}
 <span class="social-button-wrapper">
-<a title="RSS"
+<a title="RSS" aria-label="RSS"
 class="social-button rss"
 href="{{ rss_url }}"
 data-rss-trigger>
