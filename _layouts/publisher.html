@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self'; object-src 'none'; base-uri 'none'; frame-src 'none'; form-action 'none'">
+  <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {% include favicon.html %}
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳转到正文</a>
+  <header class="site-header">
+    <a class="site-avatar" href="{{ '/' | relative_url }}" aria-label="{{ site.title | escape }}">
+      <img src="{{ '/assets/images/profile.jpg' | relative_url }}" width="40" height="40" alt="">
+    </a>
+    <div class="site-identity">
+      <p class="site-name"><a href="{{ '/' | relative_url }}">{{ site.title | escape }}</a></p>
+      <p class="site-tagline">图文日常管理</p>
+    </div>
+  </header>
+  <main id="main-content" class="site-main">
+    {{ content }}
+  </main>
+</body>
+</html>

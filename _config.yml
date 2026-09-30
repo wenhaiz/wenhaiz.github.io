@@ -15,6 +15,9 @@ paginate: 10
 paginate_path: /blog/page:num/
 excerpt_separator: <!--more-->
 
+# Dynamic moments API (set after deploying the Worker)
+moments_api_url: "https://blog-moments.wenhaiz-me.workers.dev"
+
 # Social footer links
 github: "wenhaiz"
 wechat_official_qrcode: "/assets/images/wx_official_qrcode.jpg"
@@ -50,6 +53,9 @@ exclude:
   - CNAME
   - Gemfile
   - Gemfile.lock
+  - workers
+  - docs
+  - AGENTS.md
 
 plugins:
   - jekyll-seo-tag

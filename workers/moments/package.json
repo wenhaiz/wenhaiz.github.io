@@ -1,0 +1,16 @@
+{
+  "name": "blog-moments",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "migrate:local": "wrangler d1 migrations apply blog-moments --local",
+    "migrate:remote": "wrangler d1 migrations apply blog-moments --remote",
+    "test": "node --test test/*.test.js"
+  },
+  "devDependencies": {
+    "miniflare": "5.20260926.1-alpha",
+    "wrangler": "4.144.0"
+  }
+}
