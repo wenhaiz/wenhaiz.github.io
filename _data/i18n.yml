@@ -6,6 +6,7 @@ zh:
     label: 网站栏目
     skip: 跳转到正文
     articles: 文章
+    moments: 日常
     projects: 项目
     about: 关于
     switch: English
@@ -39,6 +40,7 @@ en:
     label: Site sections
     skip: Skip to content
     articles: Writing
+    moments: Moments
     projects: Projects
     about: About
     switch: 中文

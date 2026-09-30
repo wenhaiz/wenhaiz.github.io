@@ -1,0 +1,3 @@
+# Copy to .dev.vars; never commit real secrets.
+PUBLISH_PASSWORD="replace-with-a-long-random-password"
+SESSION_SECRET="replace-with-a-different-long-random-secret"

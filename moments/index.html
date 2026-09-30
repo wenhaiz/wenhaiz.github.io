@@ -1,0 +1,18 @@
+---
+layout: default
+title: 日常
+permalink: /moments/
+---
+<section class="moments" data-moments="list" data-api="{{ site.moments_api_url | escape }}">
+  <h1 class="page-title">日常</h1>
+  <p class="moments-intro">一些照片，一些生活里的小事。</p>
+  <div id="moments-list"></div>
+  <p id="moments-status" role="status" aria-live="polite"></p>
+  <button id="moments-more" type="button" hidden>加载更多</button>
+  <noscript>请启用 JavaScript 查看图文动态。</noscript>
+  <dialog id="moments-photo" class="moments-dialog">
+    <button type="button" aria-label="关闭图片">关闭</button>
+    <img alt="动态照片放大">
+  </dialog>
+</section>
+<script src="{{ '/assets/js/moments.js' | relative_url }}" defer></script>
