@@ -3,7 +3,6 @@
 {% if lang == 'en' %}{% assign home_path = '/en/' %}{% else %}{% assign home_path = '/' %}{% endif %}
 <nav class="site-nav" aria-label="{{ t.nav.label }}" data-home-nav>
   <a data-section-link="articles" href="{% if page.is_home %}#articles{% else %}{{ home_path | relative_url }}#articles{% endif %}">{{ t.nav.articles }}</a>
-  <a href="{{ '/moments/' | relative_url }}">{{ t.nav.moments }}</a>
   <a data-section-link="projects" href="{% if page.is_home %}#projects{% else %}{{ home_path | relative_url }}#projects{% endif %}">{{ t.nav.projects }}</a>
   <a data-section-link="about" href="{% if page.is_home %}#about{% else %}{{ home_path | relative_url }}#about{% endif %}">{{ t.nav.about }}</a>
 </nav>
