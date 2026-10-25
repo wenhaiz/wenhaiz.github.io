@@ -97,7 +97,7 @@ code {
 }
 
 // For dark mode
-@media (prefers-color-scheme: dark) {
+@mixin dark-syntax {
 
 pre.highlight {
   background-color: #263238;
@@ -328,3 +328,8 @@ code {
 }
 
 }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { @include dark-syntax; }
+}
+:root[data-theme="dark"] { @include dark-syntax; }

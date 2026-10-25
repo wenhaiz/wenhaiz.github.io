@@ -72,6 +72,7 @@ target="_blank">
 </span>
 {%- endif -%}
 
+{%- if site.show_rss_link -%}
 {%- assign rss_path = '/feed.xml' | relative_url -%}
 {%- if site.url and site.url != '' -%}
 {%- assign rss_url = site.url | append: rss_path -%}
@@ -101,6 +102,8 @@ data-rss-trigger>
     <p class="rss-copy-status" role="status" aria-live="polite" data-copied-status="{{ t.rss.copied_status }}"></p>
   </div>
 </div>
+
+{%- endif -%}
 
 {%- if site.researchgate -%}
 <span class="social-button-wrapper">

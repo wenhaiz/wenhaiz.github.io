@@ -5,11 +5,13 @@ layout: default
 <div class="home-sections" data-home-sections>
   <section class="home-section" id="articles" data-home-section aria-labelledby="articles-heading">
     <h2 class="section-heading" id="articles-heading">{{ t.nav.articles }}</h2>
+    <p class="section-intro">{{ t.home.articles_intro }}</p>
     {% include archive-list.html %}
   </section>
 
   <section class="home-section" id="projects" data-home-section aria-labelledby="projects-heading">
     <h2 class="section-heading" id="projects-heading">{{ t.nav.projects }}</h2>
+    <p class="section-intro">{{ t.home.projects_intro }}</p>
     {% include project-list.html %}
   </section>
 

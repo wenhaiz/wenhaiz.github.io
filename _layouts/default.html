@@ -15,6 +15,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
+    <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ site.baseurl }}/feed.xml">
 
@@ -31,29 +32,33 @@
 
 </head>
 
-<body>
+<body class="site-shell">
     <a class="skip-link" href="#main-content">{{ t.nav.skip }}</a>
+    <button class="theme-toggle" type="button" data-theme-toggle data-light-label="{{ t.theme.light }}" data-dark-label="{{ t.theme.dark }}" aria-label="{{ t.theme.dark }}" hidden>
+        <svg class="theme-sun" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+        <svg class="theme-moon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14A9 9 0 0 1 10 3.5 9 9 0 1 0 20.5 14Z"/></svg>
+    </button>
     <header class="site-header">
         {% if lang == 'en' %}{% assign home_path = '/en/' %}{% else %}{% assign home_path = '/' %}{% endif %}
         <a class="site-avatar" href="{{ home_path | relative_url }}" aria-label="{{ t.site.title }}">
-            <img src="{{ '/assets/images/profile.jpg' | relative_url }}" width="40" height="40" alt="">
+            <img src="{{ '/assets/images/profile.jpg' | relative_url }}" width="56" height="56" alt="">
         </a>
         <div class="site-identity">
             {% if page.is_home %}<h1>{% else %}<p class="site-name">{% endif %}
                 <a href="{{ home_path | relative_url }}">{{ t.site.title }}</a>
             {% if page.is_home %}</h1>{% else %}</p>{% endif %}
-            <p class="site-tagline">{{ t.site.tagline }}</p>
+            <p class="site-tagline">{{ t.site.tagline | escape | newline_to_br }}</p>
         </div>
         {% include navigation.html %}
     </header>
-    <main id="main-content" class="site-main">
+    <main id="main-content" class="site-main" tabindex="-1">
         {{ content }}
     </main>
 
     <footer class="site-footer">
-        <p class="footer-heading">{{ t.footer.connect }}</p>
         {% include social-footer.html %}
         <p class="copy">&copy; {{ t.site.title }} {{ site.time | date: '%Y' }}</p>
+        <p class="design-credit">{{ t.footer.design_credit }} <a href="https://vjy.me/work">Vijay Verma</a></p>
     </footer>
 
     {% include analytics.html %}

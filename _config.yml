@@ -19,6 +19,7 @@ excerpt_separator: <!--more-->
 moments_api_url: "https://blog-moments.wenhaiz-me.workers.dev"
 
 # Social footer links
+show_rss_link: false
 github: "wenhaiz"
 wechat_official_qrcode: "/assets/images/wx_official_qrcode.jpg"
 wechat_personal_qrcode: "/assets/images/wx_qrcode.jpg"
