@@ -38,5 +38,6 @@
 - Link issues when applicable; call out breaking or visual changes explicitly.
 
 ## Configuration & Troubleshooting
+- Keep operational runbooks, implementation plans, and content-source integration scripts out of this public repository.
 - When adjusting `_config.yml`, note that GitHub Pages may cache settings—force a rebuild by re-running the build locally to confirm.
 - If the site fails to build, run `bundle update` cautiously, then retest `jekyll build`; pin new versions in `Gemfile` as needed.
