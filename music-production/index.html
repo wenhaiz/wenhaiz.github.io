@@ -1,0 +1,36 @@
+---
+layout: default
+title: TIL on Music Production
+description: 音乐制作过程中学到的小知识和实际遇到的问题。
+permalink: /music-production/
+---
+<section class="moments music-production" aria-labelledby="music-production-title">
+  <h1 class="page-title" id="music-production-title">TIL on Music Production</h1>
+  <p class="moments-intro">记录音乐制作过程中学到的小知识和实际遇到的问题。</p>
+  <div>
+    {% assign entries = site.music_production | sort: 'date' | reverse %}
+    {% for entry in entries %}
+    <article class="moment" id="{{ entry.slug | escape }}">
+      <time datetime="{{ entry.date | date: '%Y-%m-%d' }}">{{ entry.date | date: '%Y-%m-%d' }}</time>
+      <h2 class="music-production-title"><a href="#{{ entry.slug | escape }}">{{ entry.title | escape }}</a></h2>
+      <div class="post-body">{{ entry.content | markdownify }}</div>
+      {% if entry.images.size > 0 %}
+      <div class="moments-grid{% if entry.images.size == 1 %} single{% endif %}">
+        {% for photo in entry.images %}
+        <a href="{{ photo.url | relative_url }}" aria-label="放大图片：{{ photo.alt | escape }}">
+          <img src="{{ photo.url | relative_url }}" alt="{{ photo.alt | escape }}" loading="lazy">
+        </a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </article>
+    {% else %}
+    <p>还没有音乐制作笔记。</p>
+    {% endfor %}
+  </div>
+  <dialog id="music-production-photo" class="moments-dialog" aria-label="查看图片">
+    <button type="button" aria-label="关闭图片">关闭</button>
+    <img alt="">
+  </dialog>
+</section>
+<script src="{{ '/assets/js/music-production.js' | relative_url }}" defer></script>

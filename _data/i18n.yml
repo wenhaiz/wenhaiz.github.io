@@ -7,6 +7,7 @@ zh:
     skip: 跳转到正文
     articles: 文章
     moments: 日常
+    music_production: 音乐制作
     projects: 项目
     about: 关于
     switch: English
@@ -41,6 +42,7 @@ en:
     skip: Skip to content
     articles: Writing
     moments: Moments
+    music_production: Music Production
     projects: Projects
     about: About
     switch: 中文
