@@ -5,3 +5,10 @@
     description: 把吉他练习整理成清晰的计划，专注完成每次练习，并记录长期进步。
   en:
     description: Plan focused guitar practice sessions and keep track of the work you put in.
+- name: Herdr Vertical Tabs
+  url: https://github.com/wenhaiz/herdr-vertical-tabs
+  icon: /assets/images/herdr-vertical-tabs-icon.png
+  zh:
+    description: 用左侧的垂直目录树替代 Herdr 的横向标签栏，机器、空间和标签按层级展开。
+  en:
+    description: A Herdr layout that replaces the horizontal tab bar with a vertical tree of machines, spaces and tabs.
