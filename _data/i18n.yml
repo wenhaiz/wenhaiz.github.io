@@ -4,10 +4,7 @@ zh:
     dark: 切换为深色
   site:
     title: 赵文海
-    tagline: |-
-      软件工程师，正在做
-      音乐制作人，学习中
-      写作者，偶尔
+    tagline: 一个创作者
   nav:
     label: 网站栏目
     skip: 跳转到正文
@@ -48,7 +45,7 @@ en:
     dark: Switch to dark mode
   site:
     title: Wenhai Zhao
-    tagline: Software engineer and writer.
+    tagline: A creator.
   nav:
     label: Site sections
     skip: Skip to content
