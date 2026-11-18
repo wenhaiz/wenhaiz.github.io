@@ -1,8 +1,9 @@
 ---
-title: 我要财务自由，我要工作一辈子
-description: 我想要的就是这种真实的状态。
+title: "我要财务自由，我要工作一辈子"
+description: "我想要的就是这种真实的状态。"
 category: life
 ---
+
 > 这是之前在 [有知有行](https://youzhiyouxing.cn/n/materials/1293) App 上发布的一篇「周报」，记录了我开始财务自由计划之后的一些心路历程。  
 当然，现在这个计划已经被我搁置了。
 
@@ -27,7 +28,7 @@ category: life
 
 有了自己的计划之后，我也开始模仿也大，每个月在自己的公众号上写一篇文章，记录完成进度。
 
-![当时画的财务自由进度](/assets/post-img/img_fire_progress.png)
+![我要财务自由，我要工作一辈子 · 图片 1](/assets/images/posts/fire-or-work/1-img_fire_progress.png)
 
 甚至在给有知有行发的求职信中，还提到了这个财务自由计划，现在想起来只觉得十分羞耻......
 

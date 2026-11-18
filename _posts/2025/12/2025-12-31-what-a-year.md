@@ -1,7 +1,7 @@
 ---
-title: 过去这一年（2025 版）
+title: "过去这一年（2025 版）"
+description: "祝你新年快乐"
 category: life
-description: 祝你新年快乐
 ---
 
 一到年底就能看到各种各样的年终总结文章，今年我也决定试一试。  

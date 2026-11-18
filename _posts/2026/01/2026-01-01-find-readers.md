@@ -1,7 +1,7 @@
 ---
-title: 寻找读者
+title: "寻找读者"
+description: "如果我认为我的文章有用——哪怕只对一个人有用，我就应该花点力气，尝试把它送到那个人面前。"
 category: life
-description: 如果我认为我的文章有用——哪怕只对一个人有用，我就应该花点力气，尝试把它送到那个人面前。
 ---
 
 前几天看了[一篇文章](https://www.aadillpickle.com/blog/post-more)，是一个外国小哥写的，讲了他发布文章的故事。  

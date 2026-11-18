@@ -1,8 +1,9 @@
 ---
-title: 八年之后，再看一场演唱会
-description: 这几年我感觉我学到了不少东西，但就是没有学会好好生活.
+title: "八年之后，再看一场演唱会"
+description: "这几年我感觉我学到了不少东西，但就是没有学会好好生活."
 category: life
 ---
+
 周末去天津看了一场李荣浩的演唱会。  
 
 从晚上七点半到十点半，三个小时过得飞快。观演体验很好，虽然我们的座位在看台上，但视野还不错，浩哥发挥得挺稳定，舞美和灯光能看得出来挺用心的，唯一不好的感受就是天气还是有点热。  
@@ -30,5 +31,5 @@ category: life
 以及  
 去看一场演唱会。
 
-![演唱会现场图1](/assets/post-img/20240901-concert-1.jpg)
-![演唱会现场图2](/assets/post-img/20240901-concert-2.jpg)
+![八年之后，再看一场演唱会 · 图片 1](/assets/images/posts/concert-after-8-years/1-20240901-concert-1.jpg)
+![八年之后，再看一场演唱会 · 图片 2](/assets/images/posts/concert-after-8-years/2-20240901-concert-2.jpg)
